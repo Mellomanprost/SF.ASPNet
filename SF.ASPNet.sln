@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.ASPNet.ScreenApi", "SF.ASPNet.ScreenApi\SF.ASPNet.ScreenApi.csproj", "{AE8C78B6-C9D8-4E78-8313-55853F0E7CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.Api", "Home.Api\Home.Api.csproj", "{9BD5508D-74C2-4536-B1D2-57A8A72E765C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE8C78B6-C9D8-4E78-8313-55853F0E7CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8C78B6-C9D8-4E78-8313-55853F0E7CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8C78B6-C9D8-4E78-8313-55853F0E7CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8C78B6-C9D8-4E78-8313-55853F0E7CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD5508D-74C2-4536-B1D2-57A8A72E765C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD5508D-74C2-4536-B1D2-57A8A72E765C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD5508D-74C2-4536-B1D2-57A8A72E765C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD5508D-74C2-4536-B1D2-57A8A72E765C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB2682F2-B3D8-443E-86C4-2B371F3FC2F4}
+	EndGlobalSection
+EndGlobal
