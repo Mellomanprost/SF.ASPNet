@@ -1,5 +1,6 @@
 using Home.Api.Configuration;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace Home.Api
 {
@@ -21,6 +22,9 @@ namespace Home.Api
             // Добавляем новый сервис
             builder.Services.Configure<HomeOptions>(Configuration);
             builder.Services.Configure<HomeOptions>(opt => { opt.Area = 120; });
+            // Подключаем автомаппинг
+            var assembly = Assembly.GetAssembly(typeof(MappingProfile));
+            builder.Services.AddAutoMapper(assembly);
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

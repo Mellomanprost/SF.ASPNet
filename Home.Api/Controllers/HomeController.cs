@@ -1,5 +1,7 @@
 ﻿using System.Text;
+using AutoMapper;
 using Home.Api.Configuration;
+using Home.Api.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
@@ -11,11 +13,13 @@ namespace Home.Api.Controllers
     {
         // Ссылка на объект конфигурации
         private IOptions<HomeOptions> _options;
+        private IMapper _mapper;
 
         // Инициализация конфигурации при вызове конструктора
-        public HomeController(IOptions<HomeOptions> options)
+        public HomeController(IOptions<HomeOptions> options, IMapper mapper)
         {
             _options = options;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -25,6 +29,9 @@ namespace Home.Api.Controllers
         [Route("info")] // Настройка маршрута с помощью атрибутов
         public IActionResult Info()
         {
+            // Получим запрос, "смапив" конфигурацию на модель запроса
+            var infoResponse = _mapper.Map<HomeOptions, InfoResponse>(_options.Value);
+
             // Объект Stringbuilder, в который будем "собирать" результат из конфигурации
             var pageResult = new StringBuilder();
 
@@ -43,8 +50,11 @@ namespace Home.Api.Controllers
             pageResult.Append($"Адрес:                     {_options.Value.Address.Street}" +
                               $" {_options.Value.Address.House}/{_options.Value.Address.Building}{Environment.NewLine}");
 
-            // Преобразуем результат в строку и выводим, как обычную веб-страницу
-            return StatusCode(200, pageResult.ToString());
+            // Преобразуем результат в строку и выводим, как обычную веб-страницу 
+            //return StatusCode(200, pageResult.ToString());
+
+            // Вернём ответ
+            return StatusCode(200, infoResponse);
         }
     }
 
