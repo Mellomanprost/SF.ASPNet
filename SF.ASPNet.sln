@@ -5,7 +5,11 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF.ASPNet.ScreenApi", "SF.ASPNet.ScreenApi\SF.ASPNet.ScreenApi.csproj", "{AE8C78B6-C9D8-4E78-8313-55853F0E7CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.Api", "Home.Api\Home.Api.csproj", "{9BD5508D-74C2-4536-B1D2-57A8A72E765C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Home.Api", "Home.Api\Home.Api.csproj", "{9BD5508D-74C2-4536-B1D2-57A8A72E765C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeApi.Contracts", "HomeApi.Contracts\HomeApi.Contracts.csproj", "{5B054613-38D5-47D4-8122-A2C003D3921F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenApi.Contracts", "ScreenApi.Contracts\ScreenApi.Contracts.csproj", "{84BEF2C8-B3E2-4B81-94BC-5103DD4B5A81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{9BD5508D-74C2-4536-B1D2-57A8A72E765C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BD5508D-74C2-4536-B1D2-57A8A72E765C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BD5508D-74C2-4536-B1D2-57A8A72E765C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B054613-38D5-47D4-8122-A2C003D3921F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B054613-38D5-47D4-8122-A2C003D3921F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B054613-38D5-47D4-8122-A2C003D3921F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B054613-38D5-47D4-8122-A2C003D3921F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84BEF2C8-B3E2-4B81-94BC-5103DD4B5A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84BEF2C8-B3E2-4B81-94BC-5103DD4B5A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84BEF2C8-B3E2-4B81-94BC-5103DD4B5A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84BEF2C8-B3E2-4B81-94BC-5103DD4B5A81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

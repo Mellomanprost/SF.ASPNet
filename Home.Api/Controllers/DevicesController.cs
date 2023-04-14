@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Home.Api.Configuration;
-using Home.Api.Contracts.Devices;
+using HomeApi.Contracts.Models.Devices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
@@ -42,7 +42,12 @@ namespace Home.Api.Controllers
             AddDeviceRequest request // Объект запроса
         )
         {
-
+            if (request.CurrentVolts < 120)
+            {
+                // Добавляем для клиента информативную ошибку
+                ModelState.AddModelError("CurrentVolts", "Устройства с напряжением меньше 120 вольт не поддерживаются!");
+                return BadRequest(ModelState);
+            }
             return StatusCode(200, $"Устройство {request.Name} добавлено!");
         }
     }

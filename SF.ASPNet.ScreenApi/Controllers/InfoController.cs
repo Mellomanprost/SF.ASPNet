@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using SF.ASPNet.ScreenApi.Configuration;
-using SF.ASPNet.ScreenApi.Models;
 
 namespace SF.ASPNet.ScreenApi.Controllers
 {

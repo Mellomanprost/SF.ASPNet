@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Home.Api.Configuration;
-using Home.Api.Contracts;
+using HomeApi.Contracts.Models.Home;
 
 namespace Home.Api
 {

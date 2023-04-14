@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using ScreenApi.Contracts.Models;
 using SF.ASPNet.ScreenApi.Configuration;
 
 namespace SF.ASPNet.ScreenApi.Controllers
@@ -40,5 +41,17 @@ namespace SF.ASPNet.ScreenApi.Controllers
 
             return PhysicalFile(filePath, fileType, fileName);
         }
+
+        /// <summary>
+        /// Подключение нового устройства
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("")]
+        public IActionResult Add([FromBody] AddDiskRequest request)
+        {
+            return StatusCode(200, request.Name);
+        }
+
     }
 }

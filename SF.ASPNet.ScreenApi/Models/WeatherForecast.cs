@@ -10,4 +10,4 @@ namespace SF.ASPNet.ScreenApi.Models
 
         public string? Summary { get; set; }
     }
-} 
+}
