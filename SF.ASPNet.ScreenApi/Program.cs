@@ -1,4 +1,7 @@
+using FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
+using ScreenApi.Contracts.Models;
+using ScreenApi.Contracts.Validators;
 using SF.ASPNet.ScreenApi.Configuration;
 
 namespace SF.ASPNet.ScreenApi
@@ -16,6 +19,8 @@ namespace SF.ASPNet.ScreenApi
 
             // Add services to the container.
 
+            builder.Services.AddFluentValidation(fv =>
+                fv.RegisterValidatorsFromAssemblyContaining<AddDiskRequestValidator>());
             builder.Services.Configure<ScreenApiOptions>(Configuration);
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

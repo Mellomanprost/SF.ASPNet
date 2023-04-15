@@ -1,6 +1,8 @@
 using Home.Api.Configuration;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using FluentValidation.AspNetCore;
+using HomeApi.Contracts.Validation;
 
 namespace Home.Api
 {
@@ -19,6 +21,8 @@ namespace Home.Api
 
             // Add services to the container.
 
+            builder.Services.AddFluentValidation(fv =>
+                fv.RegisterValidatorsFromAssemblyContaining<AddDeviceRequestValidator>());
             // Добавляем новый сервис
             builder.Services.Configure<HomeOptions>(Configuration);
             builder.Services.Configure<HomeOptions>(opt => { opt.Area = 120; });
