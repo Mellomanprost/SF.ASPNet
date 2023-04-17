@@ -1,2 +1,1 @@
-# SF.ASPNet projects
-##
+# SF.ASPNet projects with practice
