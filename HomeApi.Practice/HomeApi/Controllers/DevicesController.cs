@@ -16,9 +16,9 @@ namespace HomeApi.Controllers
     [Route("[controller]")]
     public class DevicesController : ControllerBase
     {
-        private IDeviceRepository _devices;
-        private IRoomRepository _rooms;
-        private IMapper _mapper;
+        private readonly IDeviceRepository _devices;
+        private readonly IRoomRepository _rooms;
+        private readonly IMapper _mapper;
         
         public DevicesController(IDeviceRepository devices, IRoomRepository rooms, IMapper mapper)
         {

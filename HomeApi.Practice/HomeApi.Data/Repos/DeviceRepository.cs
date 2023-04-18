@@ -98,7 +98,7 @@ namespace HomeApi.Data.Repos
         public async Task DeleteDevice(Device device)
         {
             // Удаление из базы
-            var entry = _context.Entry(device); 
+            var entry = _context.Entry(device);  //Посмотреть проверить нужна ли эта строчка
             
             _context.Devices.Remove(device);
 
