@@ -27,6 +27,24 @@ namespace HomeApi.Controllers
 
         //TODO: Задание - добавить метод на получение всех существующих комнат
         /// <summary>
+        /// Получение всех комнат
+        /// </summary>
+        [HttpGet]
+        [Route("")]
+        public async Task<IActionResult> GetRooms()
+        {
+            var rooms = await _repository.GetRooms();
+
+            var resp = new GetRoomsResponse()
+            {
+                RoomAmount = rooms.Length,
+                Rooms = _mapper.Map<Room[], RoomView[]>(rooms)
+            };
+
+            return StatusCode(200, resp);
+        }
+
+        /// <summary>
         /// Обновление или изменение комнаты
         /// </summary>
         [HttpPut]
